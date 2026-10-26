@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice Garden Restaurant</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: #fffaf3;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #24382d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #e6b96b;
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #e6b96b;
+        }
+
+        .hero {
+            background: linear-gradient(#0008, #0008),
+                url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200")
+                center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #d99a43;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 45px 7%;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #24382d;
+            margin-bottom: 25px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            padding-bottom: 18px;
+            box-shadow: 0 3px 12px #0002;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            color: #24382d;
+            margin: 12px;
+        }
+
+        .card p {
+            padding: 0 12px;
+        }
+
+        .price {
+            color: #b76e24;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .chefs, .reviews {
+            background: #f1e9dc;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .info {
+            background: #24382d;
+            color: white;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .info h2 {
+            color: #e6b96b;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        input, select, textarea {
+            padding: 12px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea, button {
+            grid-column: 1 / -1;
+        }
+
+        button {
+            background: #24382d;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #b76e24;
+        }
+
+        footer {
+            background: #17251d;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        @media (max-width: 700px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery, .info, form {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h2 {
+                font-size: 28px;
+            }
+
+            .gallery img {
+                height: 220px;
+            }
+
+            textarea, button {
+                grid-column: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Spice Garden</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#chefs">Chefs</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#reservation">Reservation</a>
+        </nav>
+    </header>
+
+    <div class="hero" id="home">
+        <h2>Delicious Food, Beautiful Moments</h2>
+        <p>Enjoy fresh food and wonderful hospitality.</p>
+        <a href="#menu" class="btn">Explore Menu</a>
+    </div>
+
+    <section>
+        <h2>Welcome to Spice Garden</h2>
+        <p>We serve delicious meals prepared with fresh ingredients
+           in a warm and elegant atmosphere.</p>
+    </section>
+
+    <section id="menu">
+        <h2>Our Special Menu</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500" alt="Fresh salad">
+                <h3>Fresh Salad</h3>
+                <p>Healthy vegetables with special dressing.</p>
+                <p class="price">₹149</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500" alt="Cheese pizza">
+                <h3>Cheese Pizza</h3>
+                <p>Italian pizza with cheese and herbs.</p>
+                <p class="price">₹249</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500" alt="Burger">
+                <h3>Classic Burger</h3>
+                <p>Fresh vegetables and a delicious patty.</p>
+                <p class="price">₹179</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="chefs" class="chefs">
+        <h2>Meet Our Chefs</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=500" alt="Head chef">
+                <h3>Chef Arjun</h3>
+                <p>Expert in Indian cuisine.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?w=500" alt="Chef preparing food">
+                <h3>Chef Priya</h3>
+                <p>Specialist in Italian cuisine.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1574966739987-65e38c9a0b5a?w=500" alt="Professional chef">
+                <h3>Chef Rahul</h3>
+                <p>Expert in desserts.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Restaurant Ambience</h2>
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700" alt="Restaurant interior">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700" alt="Dining table">
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>★★★★★</h3>
+                <p>"Amazing food and friendly staff!"</p>
+                <p><b>Rahul</b></p>
+            </div>
+
+            <div class="card">
+                <h3>★★★★★</h3>
+                <p>"Beautiful ambience and tasty dishes!"</p>
+                <p><b>Priya</b></p>
+            </div>
+
+            <div class="card">
+                <h3>★★★★★</h3>
+                <p>"A wonderful place for family dinners."</p>
+                <p><b>Arun</b></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="info">
+        <div>
+            <h2>Opening Hours</h2>
+            <p>Monday – Friday: 10 AM – 10 PM</p>
+            <p>Saturday – Sunday: 9 AM – 11 PM</p>
+        </div>
+
+        <div>
+            <h2>Location</h2>
+            <p>MG Road, Vijayawada, Andhra Pradesh</p>
+            <p>Phone: +91 98765 43210</p>
+        </div>
+    </section>
+
+    <section id="reservation">
+        <h2>Reserve Your Table</h2>
+        <form action="#" method="post">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="date" required>
+            <input type="time" required>
+
+            <select required>
+                <option value="">Number of Guests</option>
+                <option>1 Guest</option>
+                <option>2 Guests</option>
+                <option>4 Guests</option>
+                <option>6 Guests</option>
+            </select>
+
+            <textarea placeholder="Special Requests"></textarea>
+            <button type="submit">Book a Table</button>
+        </form>
+    </section>
+
+    <footer>
+        <p> 2026 Spice Garden Restaurant | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

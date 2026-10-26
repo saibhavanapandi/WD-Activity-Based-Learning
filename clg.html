@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Fest 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #f2f2f8;
+            text-align: center;
+        }
+
+        header, footer {
+            background: #24105b;
+            color: white;
+            padding: 20px;
+        }
+
+        nav {
+            background: coral;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        .banner {
+            background: #6545cc;
+            color: white;
+            padding: 40px 10px;
+        }
+
+        .events {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            width: 220px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #bbb;
+        }
+
+        button {
+            background: coral;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 8px;
+        }
+
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            background: white;
+            width: 90%;
+        }
+
+        th, td {
+            border: 1px solid gray;
+            padding: 10px;
+        }
+
+        th {
+            background: #24105b;
+            color: white;
+        }
+
+        @media(max-width: 600px) {
+            .card { width: 90%; }
+            nav a { display: inline-block; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎉 College Fest 2026 🎉</h1>
+    <p>Celebrate Talent and Creativity</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#events">Events</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#register">Register</a>
+</nav>
+
+<div class="banner" id="home">
+    <h2>Welcome to Our College Fest!</h2>
+    <p>November 15–16, 2026</p>
+    <a href="#register"><button>Register Now</button></a>
+</div>
+
+<section id="events">
+    <h2>Our Events</h2>
+    <div class="events">
+        <div class="card">
+            <h3>💻 Technical Events</h3>
+            <p>Coding, Paper Presentation, Project Expo</p>
+        </div>
+
+        <div class="card">
+            <h3>🎭 Cultural Events</h3>
+            <p>Dance, Singing, Drama</p>
+        </div>
+
+        <div class="card">
+            <h3>🧑‍🏫 Workshops</h3>
+            <p>AI, Web Development, Robotics</p>
+        </div>
+    </div>
+</section>
+
+<section id="schedule">
+    <h2>Event Schedule</h2>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Event</th>
+        </tr>
+        <tr>
+            <td>Nov 15</td>
+            <td>10 AM</td>
+            <td>Coding Contest</td>
+        </tr>
+        <tr>
+            <td>Nov 15</td>
+            <td>1 PM</td>
+            <td>AI Workshop</td>
+        </tr>
+        <tr>
+            <td>Nov 16</td>
+            <td>10 AM</td>
+            <td>Dance Competition</td>
+        </tr>
+    </table>
+</section>
+
+<section>
+    <h2>Event Coordinators</h2>
+    <p>Technical: Rahul Kumar</p>
+    <p>Cultural: Priya Sharma</p>
+    <p>Workshops: Arjun Reddy</p>
+</section>
+
+<section>
+    <h2>Rules</h2>
+    <p>✔ Carry your college ID card.</p>
+    <p>✔ Follow event instructions.</p>
+    <p>✔ Maintain discipline.</p>
+</section>
+
+<section id="register">
+    <h2>Registration Form</h2>
+
+    <form onsubmit="register(event)">
+        <input type="text" placeholder="Student Name" required>
+        <input type="email" placeholder="Email Address" required>
+
+        <select required>
+            <option value="">Select Event</option>
+            <option>Technical Events</option>
+            <option>Cultural Events</option>
+            <option>Workshop</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 College Fest Management</p>
+</footer>
+
+<script>
+    function register(event) {
+        event.preventDefault();
+        alert("Registration submitted successfully!");
+        event.target.reset();
+    }
+</script>
+
+</body>
+</html>
