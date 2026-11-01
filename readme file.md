@@ -9,4 +9,4 @@
 
 -   Case Study 20
 -   Case Study 26
--   Case Study 6
+-   Case Study 21
