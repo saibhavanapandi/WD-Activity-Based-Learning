@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+/* Header */
+
+header {
+    background-color: #087e8b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Navigation */
+
+nav {
+    background-color: #064c5c;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd166;
+}
+
+/* Hero Section */
+
+.hero {
+    text-align: center;
+    padding: 70px 20px;
+    background-color: #cceef2;
+}
+
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    background-color: #087e8b;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 12px;
+}
+
+.btn:hover {
+    background-color: #064c5c;
+}
+
+/* Doctor Section */
+
+#doctors {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#doctors h2,
+.services h2 {
+    margin-bottom: 25px;
+    color: #087e8b;
+}
+
+.doctor-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.doctor-card {
+    background-color: white;
+    width: 280px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #ccc;
+}
+
+.doctor-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.doctor-card h3 {
+    color: #087e8b;
+    margin-bottom: 10px;
+}
+
+.doctor-card p {
+    margin: 8px;
+}
+
+/* Services */
+
+.services {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.service {
+    background-color: #087e8b;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 8px;
+}
+
+/* Appointment Form */
+
+.form-container {
+    width: 90%;
+    max-width: 550px;
+    background-color: white;
+    margin: 35px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #ccc;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #087e8b;
+    margin-bottom: 25px;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+form button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 25px;
+    background-color: #087e8b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #064c5c;
+}
+
+.back {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #087e8b;
+    text-decoration: none;
+}
+
+/* Contact */
+
+.contact {
+    text-align: center;
+    padding: 30px;
+    background-color: #d9f1f3;
+    line-height: 2;
+}
+
+/* Success Page */
+
+.success-container {
+    max-width: 600px;
+    margin: 120px auto;
+    padding: 40px;
+    background-color: white;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #ccc;
+}
+
+.success-container h1 {
+    color: #087e8b;
+    margin-bottom: 20px;
+}
+
+.success-container p {
+    margin: 15px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #064c5c;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .doctor-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    .success-container {
+        margin: 50px 15px;
+    }
+}
